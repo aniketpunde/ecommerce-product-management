@@ -108,7 +108,7 @@ This Node.js API manages products, variants, orders, and logistics for an e-comm
         "color": "Red",
         "quantity": 10,
         "price": 99.99,
-        "country": "INR"
+        "country": "INDIA"
       },
       {
         "variant_id": 2,
@@ -116,7 +116,7 @@ This Node.js API manages products, variants, orders, and logistics for an e-comm
         "color": "Blue",
         "quantity": 8,
         "price": 89.99,
-        "country": "INR"
+        "country": "INDIA"
       }
     ]
   }
@@ -147,7 +147,7 @@ This Node.js API manages products, variants, orders, and logistics for an e-comm
       "color": "Red",
       "quantity": 10,
       "price": 99.99,
-      "country": "INR"
+      "country": "INDIA"
     },
     {
       "variant_id": 2,
@@ -155,7 +155,7 @@ This Node.js API manages products, variants, orders, and logistics for an e-comm
       "color": "Blue",
       "quantity": 8,
       "price": 89.99,
-      "country": "INR"
+      "country": "INDIA"
     }
   ]
 }
@@ -230,7 +230,8 @@ This Node.js API manages products, variants, orders, and logistics for an e-comm
   "quantity": 2,
   "order_date": "2024-07-16T08:00:00.000Z",
   "delivery_date": "2024-07-20T08:00:00.000Z",
-  "country_code": "INR"
+  "country_code": "IN",
+  "total_price":123.7
 }
 ```
 
@@ -263,7 +264,7 @@ This Node.js API manages products, variants, orders, and logistics for an e-comm
     "quantity": 2,
     "order_date": "2024-07-16T08:00:00.000Z",
     "delivery_date": "2024-07-20T08:00:00.000Z",
-    "country_code": "INR"
+    "country_code": "IN"
   }
 ]
 ```
@@ -286,7 +287,7 @@ This Node.js API manages products, variants, orders, and logistics for an e-comm
 "quantity": 2,
 "order_date": "2024-07-16T08:00:00.000Z",
 "delivery_date": "2024-07-20T08:00:00.000Z",
-"country_code": "INR"
+"country_code": "IN"
 }
 ```
 
@@ -340,6 +341,9 @@ This Node.js API manages products, variants, orders, and logistics for an e-comm
 "order_id": 1,
 "warehouse_location": "Warehouse A",
 "shipping_status": "Shipped",
-"delivery_date": "2024-07-20T
+"delivery_date": "2024-07-20T,
+"country_code": "IN",
+"currency":"INR",
+
 }
 ```
