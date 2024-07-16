@@ -9,11 +9,16 @@ class Logistics {
         return result.insertId;
     }
 
-    static async findAll(country) {
-        const [rows] = await db.execute(
-            'SELECT * FROM Logistics WHERE country_code = ?',
-            [country]
-        );
+    static async findAll(country_code) {
+        let query = 'SELECT * FROM Logistics';
+        let params = [];
+    
+        if (country_code) {
+            query += ' WHERE country_code = ?';
+            params.push(country_code);
+        }
+    
+        const [rows] = await db.execute(query, params);
         return rows;
     }
 

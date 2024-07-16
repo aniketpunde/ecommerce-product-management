@@ -18,13 +18,13 @@ class Order {
     return result.insertId;
   }
 
-  static async findAll(country) {
+  static async findAll(country_code) {
     let query = "SELECT * FROM Orders";
     let params = [];
 
-    if (country) {
+    if (country_code) {
         query += " WHERE country_code = ?";
-        params.push(country);
+        params.push(country_code);
     }
 
     const [rows] = await db.execute(query, params);

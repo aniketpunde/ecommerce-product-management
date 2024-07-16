@@ -23,8 +23,8 @@ exports.getAllOrders = async (req, res) => {
             return res.status(400).json({ errors: errors.array() });
         }
 
-        const country = req.query.country;
-        const orders = await Order.findAll(country);
+        const country_code = req.query.country_code;
+        const orders = await Order.findAll(country_code);
         res.status(200).json(orders);
     } catch (error) {
         res.status(500).json({ error: error.message });

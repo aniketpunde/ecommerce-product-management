@@ -60,9 +60,22 @@ class Product {
     return Array.from(productsMap.values());
   }
 
+  // static async findById(id) {
+  //   const [rows] = await db.execute(
+  //     "SELECT * FROM Products p LEFT JOIN Variants v ON p.product_id = v.product_id WHERE p.product_id = ?",
+  //     [id]
+  //   );
+  //   return rows;
+  // }
+
   static async findById(id) {
     const [rows] = await db.execute(
-      "SELECT * FROM Products p LEFT JOIN Variants v ON p.product_id = v.product_id WHERE p.product_id = ?",
+      `SELECT 
+            p.product_id, p.product_name, p.product_description, p.model_number, p.sku,
+            v.variant_id, v.color, v.quantity, v.price, v.country 
+        FROM Products p 
+        LEFT JOIN Variants v ON p.product_id = v.product_id 
+        WHERE p.product_id = ?`,
       [id]
     );
     return rows;
